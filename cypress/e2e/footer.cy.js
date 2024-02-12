@@ -21,9 +21,14 @@ describe('Footer', () => {
         cy.get('._mainContentContainer_iuhou_49')
         .contains('Звітність')
 
-        
+        cy.get('._mainContentContainer_iuhou_49')
+        .contains('Рекомендації по утриманню тварин')
 
+        cy.get('g[id="facebook icon"]')
+        .should('be.visible')
 
+        cy.get('g[id="instagram icon/Default"]')
+        .should('be.visible')
     })
 })
 
