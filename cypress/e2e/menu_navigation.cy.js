@@ -1,5 +1,5 @@
-describe('Cookies', () => {
-    it('cookies', () => {
+describe('Menu', () => {
+    it('Navigation menu', () => {
       cy.visit('https://cat-for-future.crabdance.com/')
       cy.viewport(1920,1080)
       cy.location('protocol').should('eq','https')
