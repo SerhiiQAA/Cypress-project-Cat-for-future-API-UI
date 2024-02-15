@@ -23,6 +23,6 @@ describe('Cookies', () => {
 
 // checking the closure of cookies
     cy.get('._cookie_1sbl7_1')
-    .should('not.be.visible')
+    .should('not.exist')
   })
 })
