@@ -1,6 +1,6 @@
 describe('Our Cats', () => {
     it('Our Cats', () => {
-      cy.visit('https://cat-for-future.crabdance.com/')
+      cy.visit('https://cat-for-future.site/')
       cy.viewport(1920,1080)
       cy.location('protocol').should('eq','https:')
 

@@ -1,6 +1,6 @@
 describe('Menu', () => {
     it('Navigation menu', () => {
-      cy.visit('https://cat-for-future.crabdance.com/')
+      cy.visit('https://cat-for-future.site/')
       cy.viewport(1920,1080)
       cy.location('protocol').should('eq','https:')
       cy.get('._contentBtn_1gw6e_178 > ._button_a4x38_2').should('be.visible')

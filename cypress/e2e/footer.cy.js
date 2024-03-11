@@ -1,7 +1,7 @@
 describe('Footer', () => {
     it('Navigation footer', () => {
         cy.viewport(1920,1080)
-        cy.visit('https://cat-for-future.crabdance.com/')
+        cy.visit('https://cat-for-future.site/')
         cy.get('div[class="_container_iuhou_26"]')
         .should('be.visible')
         .contains('Перегляд кошенят')
