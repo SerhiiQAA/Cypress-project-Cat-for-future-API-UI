@@ -1,5 +1,5 @@
 describe('Cookies', () => {
-    it('cookies', () => {
+    it('cookies_new', () => {
       cy.viewport(1920,1080)
       cy.visit('https://cat-for-future.site/')
 
