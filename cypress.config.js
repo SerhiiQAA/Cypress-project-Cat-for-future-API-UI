@@ -10,6 +10,7 @@ module.exports = defineConfig({
     saveAllAttempts: false,
   },
   e2e: {
+    experimentalStudio: true,
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);    },
   },
