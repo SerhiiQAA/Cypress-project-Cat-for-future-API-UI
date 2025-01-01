@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:api": "dredd swagger.yaml http://localhost:3000/api"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "cypress-axe": "^1.5.0"
   },
   "devDependencies": {
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "dredd": "^14.1.0"
   }
 }

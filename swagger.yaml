@@ -1,0 +1,112 @@
+openapi: 3.0.0
+info:
+  title: Task Management API
+  description: API для управління завданнями
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+paths:
+  /tasks:
+    get:
+      summary: Отримати список усіх завдань
+      responses:
+        '200':
+          description: Список завдань успішно отримано
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+    post:
+      summary: Створити нове завдання
+      requestBody:
+        description: Дані нового завдання
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewTask'
+      responses:
+        '201':
+          description: Завдання успішно створено
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+  /tasks/{id}:
+    get:
+      summary: Отримати завдання за ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: ID завдання
+      responses:
+        '200':
+          description: Завдання успішно отримано
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+        '404':
+          description: Завдання не знайдено
+    put:
+      summary: Оновити завдання за ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: ID завдання
+      requestBody:
+        description: Дані оновленого завдання
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Task'
+      responses:
+        '200':
+          description: Завдання успішно оновлено
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+        '404':
+          description: Завдання не знайдено
+    delete:
+      summary: Видалити завдання за ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: ID завдання
+      responses:
+        '204':
+          description: Завдання успішно видалено
+        '404':
+          description: Завдання не знайдено
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+    NewTask:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
