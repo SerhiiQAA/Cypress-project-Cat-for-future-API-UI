@@ -6,7 +6,7 @@ describe('Footer', () => {
         cy.injectAxe()
         cy.checkA11y()
 
-        cy.get('div[class="_container_iuhou_26"]')
+        cy.get('div[class="_container_iuhou_26"]')  
             .should('be.visible')
             .contains('Перегляд кошенят')
 
